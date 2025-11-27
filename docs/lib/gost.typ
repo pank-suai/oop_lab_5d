@@ -2,8 +2,20 @@
 
 
 #let init(body) = {
-  titlepage(authors: ("В.Д. Панков",), city: "Санкт-Петербург", department: "Кафедра № ", documentName: "ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ", education: "ГУАП", group: "М412", teachers: (), position: "")
-  
+  titlepage(
+    authors: ("В.Д. Панков",),
+    city: "Санкт-Петербург",
+    department: "Кафедра № 43",
+    documentName: "ОТЧЁТ ПО ЛАБОРАТОРНОЙ РАБОТЕ №5Д (дополнительная)",
+    title: ["Виртуальные функции и абстрактные классы"],
+    education: "ГУАП",
+    group: "М412",
+    teachers: ("Е.О. Шумова",),
+    position: "старший преподаватель",
+    object: [Основы программирования],
+  )
+
+
   set text(
     font: "Times New Roman",
     size: 14pt,
@@ -30,7 +42,7 @@
     it
   }
 
-  show figure: it =>{
+  show figure: it => {
     it
   }
 
@@ -39,7 +51,7 @@
   show list: set par(hanging-indent: -2.5em)
 
   // Ссылка на изображения (без рисунок, просто число)
-  show ref: it =>{
+  show ref: it => {
     let el = it.element
 
     if el != none and el.func() == figure {
@@ -57,14 +69,14 @@
 
 
   // titlepage
-  
+
 
   set page(
     margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm),
   )
-    
+
   // toc
- {
+  {
     if false {
       show outline: set block(below: 1.25cm / 2)
       show heading: it => {
@@ -89,10 +101,10 @@
   show figure: set block(breakable: true)
   set math.equation(numbering: "(1)")
   set page(numbering: "1")
-  
+
 
   show raw: set text(10pt, font: "JetBrains Mono")
-  show raw: set par(justify: false, leading: 1em)
+  //show raw: set par(justify: false, leading: 1em)
 
   body
 }

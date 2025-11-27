@@ -87,7 +87,6 @@ Point Triangle::getLeftTop() const
   return Point(minX, minY);
 }
 
-// Получение правой верхней габаритной точки
 Point Triangle::getRightTop() const
 {
   // Находим максимальный X и минимальный Y
@@ -106,7 +105,6 @@ Point Triangle::getRightTop() const
   return Point(maxX, minY);
 }
 
-// Получение левой нижней габаритной точки
 Point Triangle::getLeftBottom() const
 {
   // Находим минимальный X и максимальный Y
